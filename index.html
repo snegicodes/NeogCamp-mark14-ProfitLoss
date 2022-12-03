@@ -13,11 +13,11 @@
     </header>
     <section>
       <label for="price-initial">Initial Price (per unit): </label>
-      <input type="number" id="price-initial" />
+      <input type="number" min="1" id="price-initial" />
       <label for="stocks-quantity">Quantity of Stocks: </label>
-      <input type="number" id="stocks-quantity" />
+      <input type="number" min="1" id="stocks-quantity" />
       <label for="price-current">Current Price (per unit):</label>
-      <input type="number" id="price-current" />
+      <input type="number" min="1" id="price-current" />
       <button id="calc-percent">Calculate</button>
       <p id="result-msg"></p>
       <button id="reset-fields">Reset</button>

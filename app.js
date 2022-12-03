@@ -13,7 +13,13 @@ function handleCalcClick() {
   let currentCost = Number(currentPrice.value);
   let noOfStocks = Number(stocksQuantity.value);
 
-  calculateResult(initialCost, noOfStocks, currentCost);
+  if (initialCost >= 1 && currentCost >= 1 && noOfStocks >= 1) {
+    calculateResult(initialCost, noOfStocks, currentCost);
+  } else {
+    resultMsg.style.display = "block";
+    resultMsg.innerText = "Enter Valid Values ❌";
+    resultMsg.style.color = "red";
+  }
 }
 
 function calculateResult(initialCost, noOfStocks, currentCost) {

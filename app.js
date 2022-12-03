@@ -25,13 +25,13 @@ function handleCalcClick() {
 function calculateResult(initialCost, noOfStocks, currentCost) {
   if (initialCost > currentCost) {
     let loss = (initialCost - currentCost) * noOfStocks;
-    let lossPercent = (loss / initialCost) * 100;
+    let lossPercent = (loss / (initialCost * noOfStocks)) * 100;
     resultMsg.innerText = `Oops 🙁, Your Loss is ${loss} and your loss percent is ${lossPercent}%`;
     resultMsg.style.color = "red";
     reset.style.display = "block";
   } else if (currentCost > initialCost) {
     let profit = (currentCost - initialCost) * noOfStocks;
-    let profitPercent = (profit / initialCost) * 100;
+    let profitPercent = (profit / (initialCost * noOfStocks)) * 100;
     resultMsg.innerText = `Congratulations ✨, Your profit is ${profit} and your profit percent is ${profitPercent}%`;
     resultMsg.style.color = "green";
     reset.style.display = "block";
